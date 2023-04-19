@@ -49,16 +49,19 @@ struct node* delete_node(struct node* root, int data) {
     else {
         if (root->left == NULL && root->right == NULL) {
             free(root);
+            
             return NULL;
         }
         else if (root->left == NULL) {
             struct node* temp = root->right;
             free(root);
+            
             return temp;
         }
         else if (root->right == NULL) {
             struct node* temp = root->left;
             free(root);
+            
             return temp;
         }
         else {
