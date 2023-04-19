@@ -1,4 +1,8 @@
-//program that reads in a string from the user and determines whether or not it is a valid IPv4 address
+/*program that reads in a string from the user and determines whether or not it is a valid IPv4 address
+example 192.168.0.1(valid)
+        10.0.0.1(valid)
+        256.0.0.1(invalid)
+        192.168.0(invalid)*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
