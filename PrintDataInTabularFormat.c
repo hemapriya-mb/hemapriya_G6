@@ -1,5 +1,6 @@
 //Write a program that prompts the user to enter a string (e.g."1|Alice|25;2|Bob|30;3|Charlie|35") and then prints out the contents of the table in tabular format.
 #include <stdio.h>
+
 int main() {
  char input[100];
  printf("Enter a string \n");
@@ -31,5 +32,6 @@ int main() {
        i++;
     }
  }
+ 
  return 0;
 }
