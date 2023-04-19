@@ -112,7 +112,6 @@ int main(){
     printf("Breadth traversal of the tree: ");
     breadthFirstTraversal( root);
     printf("\n");
-    
-   
-return 0;
+      
+    return 0;
 }
