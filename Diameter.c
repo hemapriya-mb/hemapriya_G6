@@ -53,7 +53,7 @@ int diameter(struct node* root) {
 
 int main(){
     struct node *root=NULL;
-    int num,data,value;
+    int num,data;
     printf("Enter the number of elements: ");
     scanf("%d",&num);
     printf("Enter the elements: ");
