@@ -4,6 +4,7 @@
 #include <string.h>
 #include <ctype.h>
 #define MAX_IP_LEN 15
+
 int main() {
     char ip[MAX_IP_LEN + 1];  
     int a, b, c, d;
