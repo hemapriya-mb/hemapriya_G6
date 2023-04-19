@@ -8,7 +8,7 @@ struct node {
 
 struct node* insert(struct node *root, int value) {
     if (root == NULL) {
-        struct node newnode = (struct node) malloc(sizeof(struct node));
+        struct node *newnode = (struct node) malloc(sizeof(struct node));
         newnode->data = value;
         newnode->left = NULL;
         newnode->right = NULL;
