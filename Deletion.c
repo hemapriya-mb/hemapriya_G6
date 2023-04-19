@@ -79,7 +79,7 @@ struct node* delete_node(struct node* root, int data) {
 
 int main(){
     struct node *root=NULL;
-    int num,data,value,to_delete;
+    int num,data,to_delete;
     printf("Enter the number of elements: ");
     scanf("%d",&num);
     printf("Enter the elements: ");
