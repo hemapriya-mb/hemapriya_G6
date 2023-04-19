@@ -1,5 +1,6 @@
 // program that takes a string of integers separated by commas as input and enclosed by braces and then prints each integer on a new line.
 #include <stdio.h>
+
 int main() {
     char input[100];
     printf("Enter a string of integers enclosed by braces: ");
@@ -18,5 +19,6 @@ int main() {
         printf("%d\n", num);
         i++;
     }
+    
     return 0;
 }
