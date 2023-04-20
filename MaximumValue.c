@@ -8,7 +8,7 @@ int main() {
    scanf("%[^\n]", input);  
    for (int i = 0; input[i] != '\0'; i++) {
      int num = 0;
-     int sign = 1; // 
+     int sign = 1; 
      if (input[i] == '-') { 
         sign = -1; 
         i++; 
