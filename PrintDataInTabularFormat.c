@@ -13,7 +13,8 @@ int main() {
        id = id * 10 + (input[i] - '0');
        i++;
     }
-    i++; 
+    i++;
+  
     char name[100];
     int j = 0;
     while (input[i] != '|') {
@@ -22,11 +23,13 @@ int main() {
       j++;
     }
     i++; 
+  
     int age = 0;
     while (input[i] != ';' && input[i] != '\0') {
        age = age * 10 + (input[i] - '0');
        i++;
      }
+  
     printf("%d %s %d\n", id, name, age);
     if (input[i] == ';') {
        i++;
