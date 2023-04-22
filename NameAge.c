@@ -21,9 +21,11 @@ int main() {
         }
         name[j] = '\0';
         i++;
+        
         while (input[i] == ' ' || input[i] == '\t') {
             i++;
         }
+        
         j = 0;
         while (input[i] >= '0' && input[i] <= '9') {
             age_str[j] = input[i];
@@ -36,6 +38,7 @@ int main() {
         if (age >= min_age) {
             printf("%s\n", name);
         }
+        
         while (input[i] != ',' && input[i] != '\n' && input[i] != '\0') {
             i++;
         }
