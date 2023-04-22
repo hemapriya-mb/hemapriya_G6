@@ -34,6 +34,7 @@ int main() {
         printf("%d ", row_sum[i]);
     }
     printf("\n");
+    
     printf("Sum of each column:\n");
     for (int j = 0; j < n; j++) {
         printf("%d ", col_sum[j]);
