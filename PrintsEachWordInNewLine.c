@@ -7,13 +7,13 @@ int main() {
  printf("Enter a sentence: ");
  scanf("%[^\n]",sentence);
  for (i = 0; sentence[i] != '\0'; i++) {
-   if (sentence[i] == ' ') {
-     printf("\n");
-   }
-   else {
-     printf("%c", sentence[i]);
-   }
- }
+       if (sentence[i] == ' ') {
+          printf("\n");
+       }
+       else {
+          printf("%c", sentence[i]);
+       }
+  }
  
  return 0;
 }
