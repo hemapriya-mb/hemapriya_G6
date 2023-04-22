@@ -6,21 +6,24 @@ int main() {
    char input[100];
    printf("Enter a list of integers separated by commas: ");
    scanf("%[^\n]", input);  
+   
    for (int i = 0; input[i] != '\0'; i++) {
-     int num = 0;
-     int sign = 1; 
-     if (input[i] == '-') { 
-        sign = -1; 
-        i++; 
-     }
-     while (input[i] >= '0' && input[i] <= '9') {
-        num = num * 10 + (input[i] - '0');
-        i++;
-     }
-     num *= sign; 
-     if (num > max) {
-        max = num;
-     }
+        int num = 0;
+        int sign = 1; 
+          if (input[i] == '-') { 
+              sign = -1; 
+              i++; 
+          }
+      
+          while (input[i] >= '0' && input[i] <= '9') {
+               num = num * 10 + (input[i] - '0');
+               i++;
+          }
+      
+          num *= sign; 
+          if (num > max) {
+               max = num;
+          }
   }
   printf("The maximum value in the list is: %d", max);
  
