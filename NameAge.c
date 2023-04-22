@@ -45,9 +45,9 @@ int main() {
 
         if (input[i] == ',') {
             i++;
-            while (input[i] == ' ' || input[i] == '\t') {
-                i++;
-            }
+                while (input[i] == ' ' || input[i] == '\t') {
+                     i++;
+                }
         }
     }
 
