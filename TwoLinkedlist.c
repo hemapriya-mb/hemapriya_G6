@@ -24,31 +24,33 @@ void printList(struct node* node) {
 
 int main() {
     char str[50];
-    printf("Enter input string: ");
+    printf("Enter input string in the format(!2:26$!32:665$): ");
     fgets(str, 50, stdin);
     struct node* head1 = NULL;
     struct node* head2 = NULL;
     int i = 0;
     while (str[i] != '\0') {
-        if (str[i] == '!') {
-            i++;
-            int num1 = 0;
-            while (str[i] != ':') {
-                num1 = num1 * 10 + (str[i] - '0');
-                i++;
-            }
-            i++;
-            int num2 = 0;
-            while (str[i] != '$') {
-                num2 = num2 * 10 + (str[i] - '0');
-                i++;
-            }
+           if (str[i] == '!') {
+              i++;
+                   int num1 = 0;
+                   while (str[i] != ':') {
+                       num1 = num1 * 10 + (str[i] - '0');
+                       i++;
+                   }
+                   i++;
+            
+                   int num2 = 0;
+                   while (str[i] != '$') {
+                       num2 = num2 * 10 + (str[i] - '0');
+                       i++;
+                   }
             insertNode(&head1, num1);
             insertNode(&head2, num2);
             i++;
-        } else {
-            i++;
-        }
+           } 
+           else {
+               i++;
+           }
     }
     printf("Linked List 1: ");
     printList(head1);
