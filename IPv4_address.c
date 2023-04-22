@@ -26,7 +26,8 @@ int main() {
     }
     if (is_valid) {
         printf("%s is a valid IPv4 address.\n", ip);
-    } else {
+    } 
+    else {
         printf("%s is not a valid IPv4 address.\n", ip);
     }
   
