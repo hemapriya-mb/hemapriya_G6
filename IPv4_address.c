@@ -17,13 +17,16 @@ int main() {
     printf("Enter an IPv4 address: ");
     scanf("%s", ip);
     num_fields = sscanf(ip, "%d.%d.%d.%d", &a, &b, &c, &d);
+        
     if (num_fields != 4) {
         is_valid = 0;
     }
+        
     if (is_valid && (a < 0 || a > 255 || b < 0 || b > 255 ||
                      c < 0 || c > 255 || d < 0 || d > 255)) {
         is_valid = 0;
     }
+        
     if (is_valid) {
         printf("%s is a valid IPv4 address.\n", ip);
     } 
