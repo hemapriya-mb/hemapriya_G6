@@ -1,4 +1,5 @@
 // program that prompts the user to enter a list of integers separated by commas and then finds the maximum value in the list.
+#include <stdio.h>
 #include <stdlib.h> 
 
 int main() {
