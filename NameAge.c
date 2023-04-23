@@ -2,6 +2,7 @@
 who are older than a specified age.*/
 
 #include <stdio.h>
+#include <stdlib.h>
 
 int main() {
     char input[1000]; 
