@@ -24,7 +24,7 @@ void printList(struct node* node) {
 
 int main() {
     char str[50];
-    printf("Enter input string in the format(!2:26$!32:665$): ");
+    printf("Enter input string in the format(!2:26$!-32:-665$): ");
     fgets(str, 50, stdin);
     struct node* head1 = NULL;
     struct node* head2 = NULL;
@@ -33,20 +33,34 @@ int main() {
            if (str[i] == '!') {
               i++;
                    int num1 = 0;
-                   while (str[i] != ':') {
-                       num1 = num1 * 10 + (str[i] - '0');
+                   int sign1 = 1;
+               
+                       if (str[i] == '-') {
+                           sign1 = -1;
+                           i++;
+                       }
+               
+                       while (str[i] != ':') {
+                            num1 = num1 * 10 + (str[i] - '0');
+                            i++;
+                       }
+                       num1 *= sign1;
                        i++;
-                   }
-                   i++;
             
-                   int num2 = 0;
-                   while (str[i] != '$') {
-                       num2 = num2 * 10 + (str[i] - '0');
+                       int num2 = 0;
+                       int sign2 = 1;
+                       if (str[i] == '-') {
+                           sign2 = -1;
+                           i++;
+                       }
+                       while (str[i] != '$') {
+                           num2 = num2 * 10 + (str[i] - '0');
+                           i++;
+                      }
+                       num2 *= sign2;
+                       insertNode(&head1, num1);
+                       insertNode(&head2, num2);
                        i++;
-                   }
-            insertNode(&head1, num1);
-            insertNode(&head2, num2);
-            i++;
            } 
            else {
                i++;
