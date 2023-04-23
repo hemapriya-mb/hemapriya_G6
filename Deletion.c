@@ -8,7 +8,7 @@ struct node {
 
 struct node* insert(struct node *root, int value) {
     if (root == NULL) {
-        struct node *newnode = (struct node) malloc(sizeof(struct node));
+        struct node *newnode = (struct node*) malloc(sizeof(struct node));
         newnode->data = value;
         newnode->left = NULL;
         newnode->right = NULL;
@@ -87,7 +87,7 @@ int main(){
         scanf("%d",&data);
         root = insert(root,data);
     }
-    printf("Inorder traversal of the tree: ");
+    printf("Before deletion: ");
     print(root);
     printf("\n");
     printf("enter the value to be deleted\n");
