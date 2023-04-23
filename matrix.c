@@ -1,4 +1,4 @@
-//program that reads in a matrix of integers and prints the sum of each row and column.
+//program that reads in a n*n matrix of integers and prints the sum of each row and column.
 #include <stdio.h>
 
 int main() {
