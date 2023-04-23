@@ -1,6 +1,7 @@
 // program that takes a string of integers separated by commas as input and enclosed by braces and then prints each integer on a new line.
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctype.h>
 
 int main() {
     char input[100];
