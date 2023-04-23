@@ -8,7 +8,7 @@ struct node {
 
 struct node* insert(struct node *root, int value) {
     if (root == NULL) {
-        struct node *newnode = (struct node) malloc(sizeof(struct node));
+        struct node *newnode = (struct node*) malloc(sizeof(struct node));
         newnode->data = value;
         newnode->left = NULL;
         newnode->right = NULL;
@@ -28,7 +28,6 @@ int max(int a, int b) {
     return (a > b ? a : b);
 }
 
-//to find height function
 int height(struct node *root) {
     if (root == NULL) {
         return 0;
