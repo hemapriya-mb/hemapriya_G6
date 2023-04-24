@@ -39,11 +39,7 @@ int main() {
         if (age >= min_age) {
             printf("%s\n", name);
         }
-        
-        while (input[i] != ',' && input[i] != '\n' && input[i] != '\0') {
-            i++;
-        }
-
+       
         if (input[i] == ',') {
             i++;
                 while (input[i] == ' ' || input[i] == '\t') {
