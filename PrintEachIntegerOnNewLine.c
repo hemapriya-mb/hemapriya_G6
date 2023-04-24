@@ -15,32 +15,38 @@ int main() {
     
     int i = 1;
     while (input[i] != '}') {
-            if (!isdigit(input[i]) && input[i] != ',') {
+        if (!isdigit(input[i]) && input[i] != ',' && input[i] != '-') {
             printf("Error: Invalid character '%c'\n", input[i]);
             exit(1);
-            }
+        }
         
-            int num = 0;
-            while (isdigit(input[i])) {
+        int sign = 1;
+        if (input[i] == '-') {
+            sign = -1;
+            i++;
+        }
+        
+        int num = 0;
+        while (isdigit(input[i])) {
             num = num * 10 + (input[i] - '0');
             i++;
-            }
-            printf("%d\n", num);
+        }
+        printf("%d\n", sign * num);
         
-            if (input[i] != ',' && input[i] != '}') {
+        if (input[i] != ',' && input[i] != '}') {
             printf("Error: Expected ',' or '}' after integer\n");
             exit(1);
-            }
-        
-            if (input[i] == ',') {
-            i++;
-            }
         }
+        
+        if (input[i] == ',') {
+            i++;
+        }
+    }
+    
     if (input[i] != '}') {
         printf("Error: Input string must end with '}'\n");
         exit(1);
-     }
+    }
 
     return 0;
 }
-
